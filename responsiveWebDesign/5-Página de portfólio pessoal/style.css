@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+}
+
+/* MENU RESPONSIVO */
+#navbar {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 800px) {
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#navbar a {
+    text-decoration: none;
+    color: orangered;
+    margin: 10px;
+}
+
+/* SECAO BEM-VINDO */
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-section h1 {
+    color: orangered;
+    font-size: 20px;
+}
+
+/* SECAO PROJETOS */
+#projects {
+    background-color: black;
+    padding: 15px;
+}
+
+#projects h2 {
+    text-align: center;
+    color: orangered;
+}
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.project-tile a {
+    text-decoration: none;
+    color: white;
+}
+
+.project-image {
+    width: 100%;
+    margin: 10px;
+}
+
+/* CONTATO */
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    text-decoration: none;
+    color: orangered;
+    font-size: 20px;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+    color: orangered;
+    height: 25px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}

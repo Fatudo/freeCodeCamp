@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    margin: 25px;
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Arial Black';
+    font-size: 40px;
+}
+
+#image-div {
+    padding: 25px;
+}
+
+#image {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img-caption {
+    text-align: center;
+}
+
+#tribute-info {
+    font-family: 'Arial';
+    font-size: 18px;
+    text-align: justify;
+    padding: 5%;
+}
+
+p {
+    padding-bottom: 15px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-family: 'Arial Black';
+    padding: 5px;
+    font-size: 15px;
+}

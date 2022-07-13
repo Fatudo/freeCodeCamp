@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meu formulário de pesquisa</title>
+</head>
+<body>
+    <main>
+        <form id="survey-form" action="#" method="get">
+            <header>
+                <h1 id="title">Formulário de pesquisa</h1>
+                <p id="description">Ajude-nos respondendo nossa pesquisa</p>  
+            </header>
+            <div id="form-div">
+                <section id="informacao-pessoal">
+                    <div class="input-box">
+                        <label id="name-label" for="name">Nome</label>
+                        <input name="nome" id="name" type="text" placeholder="nome" required>
+                    </div>
+                    <div class="input-box">
+                        <label id="email-label" for="email">Email</label>
+                        <input name="email" id="email" type="email" placeholder="email" required>
+                    </div>
+                    <div class="input-box">
+                        <label id="number-label" for="number">Número</label>
+                        <input name="number" id="number" type="number" placeholder="idade" min="18" max="60">
+                    </div>
+                    <label id="role-label" for="role">Ocupação</label>
+                    <select name="role" id="dropdown">
+                        <option value="select" selected>Selecione a sua ocupação</option>
+                        <option value="estudante">Estudante</option>
+                        <option value="estudo-integral">Estudante em tempo integral</option>
+                        <option value="trabalho-integral">Trabalho em tempo integral</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </section>
+                <section id="recomendacao-usuario">
+                    <p>Você recomendaria freeCodeCamp a um amigo?</p>
+                    <label><input type="radio" name="recomendacao" value="definitivamente">Definitivamente.</label>
+                    <label><input type="radio" name="recomendacao" value="talvez">Talvez.</label>
+                    <label><input type="radio" name="recomendacao" value="nao">Não.</label>
+                </section>
+                <section id="preferencia">
+                    <p>O que você mais gosta na plataforma freeCodeCamp? (pode marcar mais de uma opção)</p>
+                    <div>
+                        <label><input type="checkbox" value="front-end">Projetos front-end</label>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" value="back-end">Projetos back-end</label>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" value="comunidade">Comunidade de código aberto</label>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" value="videos">Vídeos</label>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" value="forum">Forum</label>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" value="cursos-adicionais">Cursos adicionais</label>
+                    </div>
+                </section>
+                <section id="comentario">
+                    <p>Outros comentários ou sugestões?</p>
+                    <textarea name="comentario" id="comentario" style="width: 26em" rows="6" placeholder="Comente aqui..."></textarea>
+                    <button class="botao" type="submit" id="submit">Enviar</button>
+                </section>
+            </div>
+        </form>
+    </main>
+    <footer>Criado por Lucas Junqueira.</footer>
+</body>
+</html>

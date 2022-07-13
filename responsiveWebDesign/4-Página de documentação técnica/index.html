@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Documentacao tecnica</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Terminal do Linux(shell)</header>
+        <ul>
+            <li class="nav-subtitle"><a class="nav-link" href="#introdução">Introdução</a></li>
+            <li class="nav-subtitle"><a class="nav-link" href="#terminal_do_linux">Terminal do Linux</a></li>
+            <li class="nav-subtitle"><a class="nav-link" href="#atalhos_do_terminal">Atalhos do terminal</a></li>
+            <li class="nav-subtitle"><a class="nav-link" href="#diretórios_do_sistema">Diretórios do sistema</a></li>
+            <li class="nav-subtitle"><a class="nav-link" href="#comandos_no_terminal">Comandos no terminal</a></li>
+            <li class="nav-subtitle"><a class="nav-link" href="#comandos_básicos">Comandos básicos</a></li>
+            <li class="comandos-subtitle"><a href="#comando-man">Comando man</a></li>
+            <li class="comandos-subtitle"><a href="#comando-ls">Comando ls</a></li>
+            <li class="comandos-subtitle"><a href="#comando-cd">Comando cd</a></li>
+            <li class="comandos-subtitle"><a href="#comando-cp">Comando cp</a></li>
+            <li class="comandos-subtitle"><a href="#comando-mv">Comando mv</a></li>
+            <li class="comandos-subtitle"><a href="#comando-more">Comando more</a></li>
+            <li class="comandos-subtitle"><a href="#comando-df">Comando df</a></li>
+            <li class="comandos-subtitle"><a href="#comando-sudo">Comando sudo</a></li>
+            <li class="comandos-subtitle"><a href="#comando-grep">Comando grep</a></li>
+            <li class="comandos-subtitle"><a href="#comando-clear">Comando clear</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <h1>Guia Rápido sobre o Terminal do Linux</h1>
+        <section class="main-section" id="introdução">
+            <header>Introdução</header>
+            <p>O terminal do Linux é um dos principais aspectos do sistema operacional, sendo este, muitas vezes, motivo de temor por parte dos iniciantes — acostumados a interagir somente com interfaces gráficas. Afinal, embora o uso de comandos seja a essência da computação, a prática é novidade para a maioria dos usuários.</p>
+            <p>A quem almeja se tornar um profissional de TI bem requisitado, aprender a utilizar o terminal é, sem dúvidas, crucial. Isso porque usar a linha de comandos é uma atribuição bastante comum entre os especialistas em redes e programação. Logo, se não estamos falando de requisitos, é certo que tratamos de grandes diferenciais.</p>
+            <p>Diante da necessidade em utilizar o terminal do Linux, o que fazer para adaptar-se a ele? O objetivo deste artigo é, justamente, fornecer a você noções básicas do terminal, como a apresentação do shell, dos comandos mais utilizados e das ferramentas para praticá-los no Windows. Pronto para começar?</p>
+        </section>
+        <section class="main-section" id="terminal_do_linux">
+            <header>Terminal do Linux</header>
+            <p>Em linhas básicas, o terminal do Linux, também conhecido como shell, é um programa que recebe os comandos do usuário a partir do teclado e repassa-os às camadas de baixo nível do sistema operacional. Logo, podemos defini-lo como um mecanismo de software que intermedeia a interação do usuário com o Linux.</p>
+            <p>Se reproduzirmos a hierarquia do sistema por meio de suas camadas, veremos que a comunicação é estabelecida em quatro níveis. Primeiramente, o usuário executa o shell; este envia as instruções aos serviços de baixo nível, os quais interagem com o kernel; por sua vez, o kernel aciona o hardware.</p>
+            <p>Portanto o terminal do Linux é o instrumento que, propriamente, nos permite utilizar os componentes do computador. Até por isso os comandos representam a maneira mais abrangente para acesso aos recursos avançados do sistema, tornando-o quase ilimitado. Contudo, você sabe como o shell é acessado?</p>
+            <p>É comum entre os iniciantes acreditar na existência de vários tipos de shell. Na verdade, há aplicações de software que são emuladores do shell, capazes de fazer o usuário interagir com o terminal usando uma interface gráfica. Eles atuam como facilitadores em meio a essa relação, seja pela inteligibilidade, seja pelos recursos avançados.</p>
+        </section>
+        <section class="main-section" id="atalhos_do_terminal">
+            <header>Atalhos do Terminal</header>
+            <div id="code">
+                <code class="item">CTRL + C ==> Copia o comando atual em funcionamento</code>
+                <code class="item">CTRL + Z ==> Pausa o comando atual, em primeiro plano ou segundo plano</code>
+                <code class="item">CTRL + D ==> Fazer o logout da sessão atual</code>
+                <code class="item">CTRL + W ==> Apaga uma palavra na linha atual</code>
+                <code class="item">CTRL + U ==> Apaga a linha inteira</code>
+                <code class="item">CTRL + R ==> Busca um comando recente</code>
+                <code class="item">!! ==> Repete o último comando</code>
+                <code class="item">Exit ==> Sai do terminal</code>
+            </div>
+        </section>
+        <section class="main-section" id="diretórios_do_sistema">
+            <header>Diretórios do sistema</header>
+            <ul>
+                <li><strong>/bin/</strong> - Binários principais dos usiarios</li>
+                <li><strong>/boot/</strong> - Arquivos do sistema de Boot</li>
+                <li><strong>/dev/</strong> - Arquivos de dispositivos</li>
+                <li><strong>/etc/</strong> - Arquivos de configurações do sistema</li>
+                <li><strong>/home/</strong> - Diretório dos usuários comuns do sistema</li>
+                <li><strong>/lib/</strong> - Bibliotecas essenciais do sistema e dos módulos do kernel</li>
+                <li><strong>/media/</strong> - Diretório de montagem e dispositivos</li>
+                <li><strong>/mnt/</strong> - Diretório de montagem de dispostivos - mesmo que media</li>
+                <li><strong>/opt/</strong> - Instalação de programas não oficiais da distribuição por conta do usuário</li>
+                <li><strong>/sbin/</strong> - Armazena arquivos executáveis que representam comandos administrativos</li>
+                <li><strong>/srv/</strong> - Diretório para dados de serviços fornecidos pelo sistema</li>
+                <li><strong>/tmp/</strong> - Diretório para arquivos temporários</li>
+                <li><strong>/usr/</strong> - Segunda hierarquia do sistema, onde ficam os usuários comuns do sistema e programas.</li>
+                <li><strong>/var/</strong> - Diretório com arquivos variaveis gerados pleos programas do sistema</li>
+                <li><strong>/root/</strong> - Diretório do usuário root</li>
+                <li><strong>/proc/</strong> - Diretório virtual controlado pelo Kernel</li>
+            </ul>
+        </section>
+        <section class="main-section" id="comandos_no_terminal">
+            <header>Comandos no terminal</header>
+            <p>Comandos de diretórios e sistemas</p>
+            <div id="code2">
+                <code class="item2">cat /proc/cpuinfo ==> Ver informações do processamento</code>
+                <code class="item2">cat /proc/meminfo ==> Ver informações sobre memoria</code>
+                <code class="item2">lspci ==> Ver informações sobre placas conectadas no computador</code>
+                <code class="item2">lsusb ==> Ver informações de dispositivos usb</code>
+                <code class="item2">arch ==> Ver a arquitetura do sistema que você está usando</code>
+                <code class="item2">uname ==> Ver o nome do Kernel</code>
+                <code class="item2">uname -r ==> Ver a versão do Kernel</code>
+                <code class="item2">uname -m ==> Ver a arquitetura do Kernel</code>
+                <code class="item2">free ==> Mostra saída de memoria física e memória swape</code>
+                <code class="item2">du -h ~ ==> Ver todo o diretório pessoal e quando ele usa de espaço de hd</code>
+                <code class="item2">cat /etc/passwd ==> Ver todos os usuários do sistema</code>
+                <code class="item2">reboot ==> Reiniciar o sistema</code>
+                <code class="item2">shutdown -h now ==> Desligar o sistema</code>
+                <code class="item2">shutdown -r ==> Reiniciar o sistema</code>
+                <code class="item2">lscpu ==> Ver todas as informações sobre o CPU</code>
+                <code class="item2">lshw ==> Ver uma lista de todos os hardwares que o sistema encontrar</code>
+                <code class="item2">lshw -short ==> mostrar o caminho de hardwares</code>
+            </div>
+        </section>
+        <section class="main-section" id="comandos_básicos">
+            <header>Comandos básicos</header>
+            <p id="comando-p">A seguir uma lista com 10 comandos mais usados e uteis no terminal do Linux</p>
+            <div class="comandos" id="comando-man">
+                <header>Comando man</header>
+                <article>
+                    <h2>Apresenta páginas do manual on-line sobre um determinado comando</h2>
+                    <p>O comando man deveria estar no topo de toda lista de comandos importantes do Linux. A razão é muito simples: basta executá-lo para carregar uma página de manual (man page) sobre os comandos do sistema, com definições não apenas do uso de cada ferramenta, mas também descrições detalhadas dos inúmeros parâmetros do software e exemplos de uso.</p>
+                    <p>Para ler as man pages é muito fácil e basta executar o man seguindo do nome do comando que você deseja buscar ajuda. Não se esqueça de pressionar a tecla Enter após digitar o comando, caso contrário ele não será executado.</p>
+                    <p>Ao executar man cp, por exemplo, você poderá ler todas as instruções para o uso do comando cp. E antes de passarmos para o próximo item da lista, valem duas dicas: a primeira é que existe o comando man man, para o caso de dúvidas sobre o uso do próprio man. A segunda é que é possível traduzir o conteúdo das páginas de manual para o português, caso estejam em inglês, instalando o manpages-pt pela Central de Programas do Ubuntu.</p>
+                </article>
+            </div>
+            <div class="comandos" id="comando-ls">
+                <header>Comando ls</header>
+                <article>
+                    <h2>listagem de arquivos</h2>
+                    <p>Para listar os arquivos existentes em algum diretório, basta usar o comando ls. Se executado sem parâmetros, ele listará o conteúdo do diretório em que você se encontra. Mas você pode indicar um caminho para ele, como ls /usr/bin, por exemplo.</p>
+                    <p>Também é possível usar o ls para conferir o tamanho e a data de criação de cada arquivo ou pasta. Para isso, use o parâmetro -lh, como no exemplo a seguir: ls -lh. E se você também quiser listar os arquivos ocultos, que começam com um ponto, use a opção -a (ls -lha).</p>
+                </article>
+            </div>
+            <div class="comandos" id="comando-cd">
+                <header>Comando cd</header>
+                <article>
+                    <h2>navegue pelo sistema de arquivos</h2>
+                    <p>Para pular de pasta em pasta, não precisa abrir o gerenciador de arquivos. No próprio terminal é possível navegar pelo sistema de arquivos usando o comando cd seguido do caminho que você deseja seguir. Exemplo: cd /usr.</p>
+                    <p>Vale a pena notar que existem alguns atalhos que podem facilitar a vida do usuário. Se você executar o comando cd sem parâmetros, ele retorna para a pasta do usuário, localizada em /home. Para voltar um nível acima na árvore de diretório, use "cd ..", sem as aspas. Dessa forma, se você estiver em /usr/bin e executar "cd ..", voltará para o diretório /usr.</p>
+                </article>
+            </div>
+            <div class="comandos" id="comando-cp">
+                <header>Comando cp</header>
+                <article>
+                    <h2>copiar arquivos e pastas</h2>
+                    <p>Copiar um arquivo pelo terminal também é moleza. Use o comando cp seguindo do arquivo de origem e o destino para ele, que pode ser tanto uma nova pasta quando um novo arquivo, com nome diferente. Exemplo: cp arquivo1.txt arquivo2.txt ou, então, cp arquivo1.txt pastanova/.</p>
+                    <p>Para copiar um diretório todo, não se esqueca de inserir o parâmetro -r. Se quiser clonar uma pasta, use cp -r pasta1 pasta2, por exemplo.</p>
+                </article>
+            </div>
+            <div class="comandos" id="comando-mv">
+                <header>Comando mv</header>
+                <article>
+                    <h2>mover arquivos e pastas</h2>
+                    <p>Para mover arquivos existe o comando mv e ele pode ser usado tanto para remanejar arquivos como para renomeá-los. Se quiser enviar o arquivo de uma pasta para outra, basta seguir o exemplo mv pasta1/arquivo1 pasta2/. Se preferir apenas renomeá-lo, use mv arquivo1 arquivo2.</p>
+                </article>
+            </div>
+            <div class="comandos" id="comando-more">
+                <header>Comando more</header>
+                <article>
+                    <h2>ler arquivos de texto</h2>
+                    <p>Caso você precise ler o conteúdo de um arquivo de texto, use o comando more seguido do caminho e nome do arquivo, como em more /home/user/arquivo.txt.</p>
+                    <p>Todo conteúdo do arquivo será exibido no terminal, preenchendo a tela com texto. Para prosseguir com a leitura, pressione a barra de espaço e, caso precise voltar uma ou mais páginas, use a tecla "b". Se quiser sair antes do fim do arquivo, pressione "q".
+                    </p>
+                </article>
+            </div>
+            <div class="comandos" id="comando-df">
+                <header>Comando df</header>
+                <article>
+                    <h2>conferir o espaço em disco</h2>
+                    <p>Quer saber qual é o espaço total e quantos GB disponíveis existem em cada partição do sistema? Use o comando df -h. A opção -h, aliás, quer dizer human-readable, ou seja, legível para humanos. Se você executar o comando sem ela, as informações serão exibidas em kilobytes e será necessário convertê-las mentalmente para outras unidades.</p>
+                </article>
+            </div>
+            <div class="comandos" id="comando-sudo">
+                <header>Comando sudo</header>
+                <article>
+                    <h2>permissões especiais</h2>
+                    <p>Por razões de segurança, o Linux trabalha com permissões de usuários. Por isso, determinados comandos ou arquivos são acessíveis apenas pelo próprio dono ou pelo usuário administrador (root). Para que você não tenha que trocar de usuário a todo instante, existe o comando sudo, que garante credenciais de usuário root temporariamente, mediante a informação de uma senha.</p>
+                    <p>Para fazer o teste, tente executar o comando ls /root. Você reberá um aviso de permissão negada. Em seguida, execute sudo ls /root. Depois de informar a senha do seu próprio usuário (no caso do Ubuntu), o comando será executado normalmente e os arquivos a pasta root serão listados no terminal.</p>
+                </article>
+            </div>
+            <div class="comandos" id="comando-grep">
+                <header>Comando grep</header>
+                <article>
+                    <h2>buscas em textos</h2>
+                    <p>Imagine a seguinte situação: você tem um arquivo de texto com cerca de 200 nomes de alunos de certa escola, mas não tem certeza se um nome em específico está listado. O grep ajuda você a procurar por esse aluno e a fazer muito mais com a ajuda de expressões regulares.</p>
+                    <p>Bastaria executar o comando grep "Nome do Aluno" arquivo.txt para que o terminal busque pelo nome indicado dentro da relação. Caso você não tenha certeza se o nome do aluno foi escrito respeitando as letras maiúsculas, adicione o parâmetro -i para que grep passe a ignorar essa distinção durante a busca.</p>
+                </article>
+            </div>
+            <div class="comandos" id="comando-clear">
+                <header>Comando clear</header>
+                <article>
+                    <h2>limpar o buffer</h2>
+                    <p>Por último, um comando que ajuda a organizar um pouco a confusão de letras que ficam no terminal depois de horas de uso. Para limpar toda a ela, execute o comando clear. Depois, é só voltar a usar o terminal normalmente, como se nada tivesse acontecido.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 
