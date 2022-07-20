@@ -1,5 +1,4 @@
 function converterEmRomano(num) {
-    
     const numerais = {
         M: 1000,
         CM: 900,
@@ -15,18 +14,14 @@ function converterEmRomano(num) {
         IV: 4,
         I: 1
     }
-
     var resultado = "";
-
     for (var i in numerais) {
         while (num >= numerais[i]) {
             resultado += i;
             num -= numerais[i];
         }
     }
-
     return resultado;
-    
 }
    
 converterEmRomano(36);
